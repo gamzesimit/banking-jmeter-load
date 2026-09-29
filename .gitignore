@@ -1,0 +1,4 @@
+results/*.jtl
+results/html/
+jmeter.log
+.DS_Store
