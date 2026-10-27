@@ -32,10 +32,10 @@ machine, which removes the network and flatters every figure. What it is good
 for is noticing the day the floor moves, which is why it runs on every commit
 rather than once before a release.
 
-## Relationship to the k6 profiles
+## Relationship to the API tests
 
-The same endpoints are also measured with k6 in
-[banking-api-tests](https://github.com/gamzesimit/banking-api-tests). Two tools
-on the same target is deliberate: JMeter is what most banking teams already run,
-k6 is what fits in a pipeline without a GUI, and being able to produce the same
-answer in both is the point.
+The same endpoints are checked for correctness in
+[banking-api-tests](https://github.com/gamzesimit/banking-api-tests), where every
+endpoint also carries a single-request response time budget. That suite answers
+"is each answer right and fast enough on its own"; this plan answers "does it stay
+right and fast under sustained load".
